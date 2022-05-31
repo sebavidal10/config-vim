@@ -28,17 +28,18 @@ set si            " Smart indent
 set shiftwidth=2  " 1 tab = 2 spaces
 set tabstop=2     " tab stop on 2 spaces
 
-set splitbelow splitright " Split open at the right side and below 
+set splitbelow splitright " Split open at the right side and below
 
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
 call plug#end()
 
 " Bind "<leader>p" to a fzf-powered filename search
 nmap <leader>p :Files!<CR>
-
-let g:airline#extensions#tabline#fnamemod = ':t'
