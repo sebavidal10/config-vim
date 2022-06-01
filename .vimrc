@@ -1,4 +1,3 @@
-set ttimeout      " time out for key codes
 set ttimeoutlen=0 " wait up to 100ms after Esc for special key
 
 " navegar netrw
@@ -45,7 +44,12 @@ let g:airline#extensions#tabline#formatter = 'default'
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_termina_reports_focus = 0
 
+Plug 'tomasr/molokai'
+
 call plug#end()
 
 " Bind "<leader>p" to a fzf-powered filename search
 nmap <leader>p :Files!<CR>
+
+set background=dark
+colorscheme molokai "Set the theme to molokai
