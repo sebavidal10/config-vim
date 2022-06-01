@@ -1,4 +1,5 @@
-set ttimeoutlen=0 " wait up to 100ms after Esc for special key
+set ttimeout
+set ttimeoutlen=0 " wait up to 0ms after Esc for special key
 
 " navegar netrw
 set nocp
@@ -39,17 +40,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_termina_reports_focus = 0
 
-Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 " Bind "<leader>p" to a fzf-powered filename search
 nmap <leader>p :Files!<CR>
 
-set background=dark
-colorscheme molokai "Set the theme to molokai
+colorscheme gruvbox
