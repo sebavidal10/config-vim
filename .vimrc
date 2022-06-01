@@ -1,3 +1,6 @@
+set ttimeout      " time out for key codes
+set ttimeoutlen=0 " wait up to 100ms after Esc for special key
+
 " navegar netrw
 set nocp
 filetype plugin on
@@ -34,11 +37,14 @@ call plug#begin()
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 Plug 'tpope/vim-fugitive'
-
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_termina_reports_focus = 0
+
 call plug#end()
 
 " Bind "<leader>p" to a fzf-powered filename search
