@@ -40,14 +40,21 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'unique_tail' " top line format
 
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_termina_reports_focus = 0
 
-Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-endwise'  " autoclose ruby
+Plug 'mileszs/ack.vim'    " search in files with Ack! word
+Plug 'morhetz/gruvbox'    " Theme
+" Plug 'github/copilot.vim' need neovim
 
-Plug 'morhetz/gruvbox'
+" YouCompleteMe need
+" > brew install macvim
+" > cd ~/.vim/bundle/YouCompleteMe
+" > python3 install.py --all
+Plug 'valloric/youcompleteme'
 
 call plug#end()
 
@@ -58,7 +65,7 @@ colorscheme gruvbox
 set background=dark
 
 " ack.vim --- {{{
-" requiere ripgrep > brew install ripgrep
+" requiere ripgrep
 " Use ripgrep for searching ⚡️
 " Options include:
 " --vimgrep -> Needed to parse the rg response properly for ack.vim
