@@ -58,7 +58,7 @@ colorscheme gruvbox
 set background=dark
 
 " ack.vim --- {{{
-" requiere ripgrep
+" requiere ripgrep > brew install ripgrep
 " Use ripgrep for searching ⚡️
 " Options include:
 " --vimgrep -> Needed to parse the rg response properly for ack.vim
