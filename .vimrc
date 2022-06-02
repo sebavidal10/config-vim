@@ -53,3 +53,4 @@ call plug#end()
 nmap <leader>p :Files!<CR>
 
 colorscheme gruvbox
+set background=dark
