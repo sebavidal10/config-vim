@@ -45,10 +45,12 @@ let g:airline#extensions#tabline#formatter = 'unique_tail' " top line format
 Plug 'airblade/vim-gitgutter'
 let g:gitgutter_termina_reports_focus = 0
 
-Plug 'tpope/vim-endwise'  " autoclose ruby
-Plug 'mileszs/ack.vim'    " search in files with Ack! word
-Plug 'morhetz/gruvbox'    " Theme
-" Plug 'github/copilot.vim' need neovim
+Plug 'tpope/vim-endwise'          " autoclose ruby
+Plug 'chun-yang/auto-pairs'       " autoclose bracket
+Plug 'mileszs/ack.vim'            " search in files with Ack! word
+Plug 'morhetz/gruvbox'            " theme
+Plug 'alvan/vim-closetag'         " closetag
+Plug 'easymotion/vim-easymotion'  "search by char and next value to go
 
 " YouCompleteMe need
 " > brew install macvim
@@ -63,6 +65,8 @@ nmap <leader>p :Files!<CR>
 
 colorscheme gruvbox
 set background=dark
+
+let g:gruvbox_contrast_dark = "hard"
 
 " ack.vim --- {{{
 " requiere ripgrep
