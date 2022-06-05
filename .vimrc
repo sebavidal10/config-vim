@@ -65,6 +65,7 @@ nmap <leader>p :Files!<CR>
 
 colorscheme gruvbox
 set background=dark
+highlight Normal ctermfg=grey ctermbg=black
 
 let g:gruvbox_contrast_dark = "hard"
 
